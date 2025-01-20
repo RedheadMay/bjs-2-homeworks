@@ -4,7 +4,11 @@ function Student(name, gender, age) {
     this.age = age;
     this.marks = [];  
   }
-  
+let student1 = new Student("Софья", "женский", 27);
+let student2 = new Student("Михаил", "мужской", 32);
+let student3 = new Student("Алина", "женский", 18);
+let student4 = new Student("Ипполит", "мужской", 35);
+
   Student.prototype.setSubject = function(subjectName) {
 	this.subject = subjectName;
 }
