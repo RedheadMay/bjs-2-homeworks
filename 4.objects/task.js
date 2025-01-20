@@ -29,7 +29,5 @@ Student.prototype.exclude = function(reason) {
 	this.excluded = reason;
 }
   
-  module.exports = {
-    Student
-  };
+
   
