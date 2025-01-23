@@ -64,8 +64,8 @@ class PrintEditionItem {
     }
   }
   
-  //Задача №2
-  
+  //Задача 2. Библиотека
+
   class Library {
     constructor(name, books) {
       this.name = name;
@@ -88,44 +88,5 @@ class PrintEditionItem {
      if (!book) return null;
       this.books = this.books.filter((item) => item.name !== bookName);
       return book;
-    }
-  }
-  //Задача №3.
-  class Student {
-    constructor(name) {
-      this.name = name;
-      this.marks = {};
-    }
-  
-    addMark(mark, subject) {
-      if (mark >= 2 && mark <= 5) {
-        if (Object.keys(this.marks).includes(subject) === false) {
-          this.marks[subject] = [];
-        }
-        this.marks[subject].push(mark);
-      }
-    }
-    
-    getAverageBySubject(subject) {
-      if (!(subject in this.marks)) {
-        return 0;
-      }
-      let avg =
-        this.marks[subject].reduce((acc, mark) => acc + mark, 0) /
-        this.marks[subject].length;
-      return avg;
-    }
-  
-    getAverage() {
-      let subjects = Object.keys(this.marks);
-      if (subjects.length === 0) {
-        return 0;
-      }
-      let avg = 0;
-      for (let sub of subjects) {
-        let subAvg = this.getAverageBySubject(sub);
-        avg += subAvg;
-      }
-      return avg / subjects.length;
     }
   }
